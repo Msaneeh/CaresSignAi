@@ -1,0 +1,8 @@
+  .about-wrap{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center;}
+  .powered-by{
+    display:inline-flex; align-items:center; gap:12px; margin-top:26px;
+    padding:12px 18px; border:1px solid var(--line); border-radius:999px; background:var(--card);
+    font-size:13.5px; font-weight:600; color:var(--text);
+  }
+  .powered-by .k{font-family:var(--mono); font-weight:400; color:var(--text-muted); font-size:12px;}
+  @media (max-width:900px){ .about-wrap{grid-template-columns:1fr;} }

@@ -1,0 +1,43 @@
+  .hiw-tabs{display:flex; gap:10px; margin-bottom:34px;}
+  .hiw-tab{
+    font-family:var(--mono); font-size:13px; letter-spacing:.03em;
+    padding:11px 20px; border-radius:999px; border:1px solid var(--line);
+    background:var(--card); cursor:pointer; color:var(--text-muted); font-weight:500;
+    transition:all .18s ease;
+  }
+  .hiw-tab[aria-selected="true"]{
+    background:var(--ink); color:var(--bg); border-color:var(--ink);
+  }
+  .hiw-panel{display:none; grid-template-columns:1fr 1fr; gap:48px; align-items:center;}
+  .hiw-panel.active{display:grid;}
+  .hiw-steps{display:flex; flex-direction:column; gap:18px;}
+  .hiw-step{display:flex; gap:16px;}
+  .hiw-step .num{
+    font-family:var(--serif); font-size:20px; color:var(--green-deep);
+    width:38px; height:38px; border-radius:50%; border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center; flex-shrink:0; background:var(--card);
+  }
+  .hiw-step h4{font-family:var(--sans); font-weight:600; font-size:15.5px; color:var(--ink); margin-bottom:4px;}
+  .hiw-step p{font-size:14.5px;}
+
+  .demo-card{
+    background:var(--card); border:1px solid var(--line); border-radius:18px;
+    padding:26px; box-shadow:0 20px 44px -28px rgba(11,33,31,.35);
+  }
+  .demo-card .demo-top{display:flex; justify-content:space-between; align-items:center; margin-bottom:18px;}
+  .demo-card .demo-top span{font-family:var(--mono); font-size:11.5px; color:var(--text-muted); text-transform:uppercase; letter-spacing:.08em;}
+  .signal-dot{width:8px; height:8px; border-radius:50%; background:var(--green); display:inline-block; margin-right:6px; animation:pulse 1.6s ease-in-out infinite;}
+  @keyframes pulse{0%,100%{opacity:1;} 50%{opacity:.35;}}
+  .demo-input, .demo-output{
+    border-radius:12px; padding:18px; font-family:var(--sans);
+  }
+  .demo-input{background:var(--bg-alt); margin-bottom:14px;}
+  .demo-output{background:var(--blue-deep); color:#fff;}
+  .demo-input .k, .demo-output .k{font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; opacity:.65; margin-bottom:6px; display:block;}
+  .demo-input .v{font-size:17px; font-weight:600; color:var(--ink);}
+  .demo-output .v{font-size:17px; font-weight:600;}
+  .demo-arrow{display:flex; justify-content:center; margin:8px 0;}
+
+  @media (max-width:860px){
+    .hiw-panel.active{grid-template-columns:1fr;}
+  }

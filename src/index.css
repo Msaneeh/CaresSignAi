@@ -1,0 +1,76 @@
+  :root{
+    --ink:#0B211F;
+    --blue:#1C6E8C;
+    --blue-deep:#123B4D;
+    --green:#4E9A6C;
+    --green-deep:#2E6B47;
+    --bg:#F6F4EE;
+    --bg-alt:#EDEAE0;
+    --card:#FFFFFF;
+    --amber:#E8A33D;
+    --text:#16221F;
+    --text-muted:#54655F;
+    --line:#DAD5C7;
+    --radius:14px;
+    --serif:'IBM Plex Serif', serif;
+    --sans:'IBM Plex Sans', sans-serif;
+    --mono:'IBM Plex Mono', monospace;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{display:block; max-width:100%;}
+  a{color:inherit; text-decoration:none;}
+  ul{list-style:none;}
+  section{position:relative;}
+  .wrap{max-width:1160px; margin:0 auto; padding:0 32px;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+  }
+
+  /* ---------- Utility type ---------- */
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12.5px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--blue-deep);
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:18px;
+    font-weight:500;
+  }
+  .eyebrow::before{
+    content:"";
+    width:22px; height:1px;
+    background:var(--amber);
+    display:inline-block;
+  }
+  h1,h2,h3,h4{
+    font-family:var(--serif);
+    font-weight:500;
+    color:var(--ink);
+    letter-spacing:-0.01em;
+  }
+  h2{font-size:clamp(28px,3.4vw,42px); line-height:1.15;}
+  h3{font-size:20px; line-height:1.3;}
+  p{color:var(--text-muted);}
+  .lede{font-size:18px; max-width:640px;}
+
+    /* ---------- Section framing ---------- */
+  .section{padding:96px 0;}
+  .section.alt{background:var(--bg-alt);}
+  .section-head{max-width:640px; margin-bottom:56px;}
+  .divider{
+    height:1px; width:100%;
+    background:repeating-linear-gradient(90deg, var(--line) 0 8px, transparent 8px 16px);
+  }

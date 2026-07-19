@@ -1,0 +1,6 @@
+  .partner-row{display:flex; flex-wrap:wrap; gap:14px; margin-top:26px;}
+  .partner-pill{
+    background:var(--card); border:1px solid var(--line); border-radius:999px;
+    padding:12px 20px; font-size:14px; font-weight:500; display:flex; align-items:center; gap:10px;
+  }
+  .partner-pill .dot{width:8px; height:8px; border-radius:50%; background:var(--green);}
